@@ -15,8 +15,8 @@ body {
 
 header {
   background-image: url("/images/landscape.png");
-  color: $secondary-color;
-  height: 400px;
+  color: $primary-color;
+  height: 300px;
   overflow:hidden;
 
   nav {
@@ -31,7 +31,7 @@ header {
       padding: 15px;
     }
     a {
-      color: set-text-color($primary-color);
+      color: $primary-color;
     }
     a:hover {
       color: $secondary-color;

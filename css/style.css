@@ -14,7 +14,7 @@ a {
   margin-top: 30px;
 }
 .card-title {
-  background-color: #777777;
+  background-color: #c9c9c9;
   color: white;
   padding-left: 10px;
 }
@@ -25,15 +25,11 @@ a {
   display: block;
 }
 .card-contents .card-img-btn .card-image {
-  padding-top: 20px;
+  padding-top: 10px;
   width: 200px;
 }
-.card-contents .card-img-btn .card-buttons {
-  display: flex;
-  justify-content: center;
-}
 .card-contents .card-text {
-  padding: 20px;
+  padding: 10px;
 }
 
 .btn-secondary, .btn-primary {
@@ -67,15 +63,15 @@ a {
 }
 
 body {
-  background-color: #f4f4f4;
+  background-color: #686767;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
 }
 
 header {
   background-image: url("/images/landscape.png");
-  color: #ff9041;
-  height: 400px;
+  color: #202324;
+  height: 300px;
   overflow: hidden;
 }
 header nav {
@@ -91,7 +87,7 @@ header nav li {
   padding: 15px;
 }
 header nav a {
-  color: white;
+  color: #202324;
 }
 header nav a:hover {
   color: #ff9041;

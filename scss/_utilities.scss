@@ -11,7 +11,7 @@ a {
   display: block;
   margin-top: 30px;
   &-title {
-    background-color: rgb(119, 119, 119);
+    background-color: rgb(201, 201, 201);
     color: $card-text-color;
     padding-left: 10px;
   }
@@ -20,16 +20,13 @@ a {
     .card-img-btn {
       display: block;
       .card-image {
-        padding-top:20px;
+        padding-top:10px;
         width: 200px;
-      }
-      .card-buttons {
-        display:flex;
-        justify-content: center;
       }
     }
     .card-text {
-      padding: 20px;
+      padding: 10px;
+      
     }
   }
   
