@@ -1,43 +1,49 @@
 @import "config";
+@import "utilities";
+@import "buttons";
 
 * {
-    box-sizing:border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 body {
-    background-color: $light_color;
-    font-family: $font-stack;
-    line-height: 1.6;
+  background-color: $light_color;
+  font-family: $font-stack;
+  line-height: 1.6;
 }
-a {
-    text-decoration: none;
-    color: white;
-}
-header {
-    background-color: $primary-color;
-    color: $secondary-color;
-    height: 200px;
 
-    nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        ul {
-            display: flex;
-            list-style-type: none;
-        }
-        li {
-            padding: 15px;
-        }
-        a:hover {
-            color: $secondary-color;
-        }
+header {
+  background-color: $primary-color;
+  color: $secondary-color;
+  height: 200px;
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    ul {
+      display: flex;
+      list-style-type: none;
     }
+    li {
+      padding: 15px;
+    }
+    a {
+      color: set-text-color($primary-color);
+    }
+    a:hover {
+      color: $secondary-color;
+    }
+  }
 }
-.container {
-    max-width: 1100px;
-    padding: 0-30px;
-    margin: 0 auto;
-    overflow: hidden;
+main {
+  .main-content {
+    a {
+      color: white;
+    }
+  }
 }
+
+//media queries
+@import "mobile";

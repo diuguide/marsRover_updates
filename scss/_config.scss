@@ -2,3 +2,11 @@ $light_color: #f4f4f4;
 $font-stack: Arial, Helvetica, sans-serif;
 $primary-color: #202324;
 $secondary-color: #ff9041;
+
+@function set-text-color($color) {
+  @if (lightness($color) > 70) {
+    @return #333;
+  } @else {
+    @return white;
+  }
+}
