@@ -14,9 +14,10 @@ body {
 }
 
 header {
-  background-color: $primary-color;
+  background-image: url("/images/landscape.png");
   color: $secondary-color;
-  height: 200px;
+  height: 400px;
+  overflow:hidden;
 
   nav {
     display: flex;

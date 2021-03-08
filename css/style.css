@@ -9,6 +9,33 @@ a {
   text-decoration: none;
 }
 
+.card {
+  display: block;
+  margin-top: 30px;
+}
+.card-title {
+  background-color: #777777;
+  color: white;
+  padding-left: 10px;
+}
+.card-contents {
+  display: flex;
+}
+.card-contents .card-img-btn {
+  display: block;
+}
+.card-contents .card-img-btn .card-image {
+  padding-top: 20px;
+  width: 200px;
+}
+.card-contents .card-img-btn .card-buttons {
+  display: flex;
+  justify-content: center;
+}
+.card-contents .card-text {
+  padding: 20px;
+}
+
 .btn-secondary, .btn-primary {
   display: inline-block;
   border-radius: 5px;
@@ -46,9 +73,10 @@ body {
 }
 
 header {
-  background-color: #202324;
+  background-image: url("/images/landscape.png");
   color: #ff9041;
-  height: 200px;
+  height: 400px;
+  overflow: hidden;
 }
 header nav {
   display: flex;

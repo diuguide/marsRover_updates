@@ -7,3 +7,31 @@
 a {
   text-decoration: none;
 }
+.card {
+  display: block;
+  margin-top: 30px;
+  &-title {
+    background-color: rgb(119, 119, 119);
+    color: $card-text-color;
+    padding-left: 10px;
+  }
+  &-contents {
+    display: flex;
+    .card-img-btn {
+      display: block;
+      .card-image {
+        padding-top:20px;
+        width: 200px;
+      }
+      .card-buttons {
+        display:flex;
+        justify-content: center;
+      }
+    }
+    .card-text {
+      padding: 20px;
+    }
+  }
+  
+  
+}
