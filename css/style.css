@@ -69,9 +69,9 @@ body {
 }
 
 header {
-  background-image: url("/images/landscape.png");
+  background-image: url("/images/landscape2.png");
   color: #202324;
-  height: 300px;
+  height: 400px;
   overflow: hidden;
 }
 header nav {
