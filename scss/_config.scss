@@ -2,7 +2,8 @@ $light_color: #686767;
 $font-stack: Arial, Helvetica, sans-serif;
 $primary-color: #202324;
 $secondary-color: #ff9041;
-$card-text-color: white;
+$card-text-color: rgb(55, 55, 55);
+$card-background: rgb(248, 247, 207);
 
 
 @function set-text-color($color) {
