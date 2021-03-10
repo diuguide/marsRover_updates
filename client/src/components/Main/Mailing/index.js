@@ -4,7 +4,7 @@ const MailingList = () => {
           <div className="mail-title">
               <h3>Please Join our Mailing List!</h3>
           </div>
-          <div className="email-input">
+          <div className="email-form">
               <input type="text" id="email-list" placeholder="Enter Email"></input>
           </div>
           <div className="submit-email">

@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <HeaderDiv />
-      <div class="seperator"></div>
+      <div className="seperator"></div>
       <MainDiv />
     </>
   );

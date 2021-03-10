@@ -1,4 +1,4 @@
-export const Posts = () => {
+const postData = {
   posts: [
     {
       title: "Touchdown!",
@@ -10,5 +10,7 @@ export const Posts = () => {
         "https://mars.nasa.gov/news/8865/touchdown-nasas-mars-perseverance-rover-safely-lands-on-red-planet/",
       img: "",
     },
-  ];
+  ]
 };
+
+export default postData;

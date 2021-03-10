@@ -2,7 +2,7 @@ const HeaderDiv = () => {
   return (
     <header>
       <nav>
-        <div class="title">Perserverance Rover</div>
+        <div className="title">Perserverance Rover</div>
         <ul>
           <li>
             <a href="#updates">Updates</a>

@@ -8,35 +8,33 @@
   border-radius: 20px;
   grid-template-columns: 700px 300px;
   .posts {
-      margin: 10px;
+    display: block;
+    margin: 10px;
     background-color: $sage;
-    border: 2px solid $bistre;
-    border-radius: 20px;
+    border-radius: 10px;
   }
   .mail-input {
-      margin: 10px;
+    margin: 10px;
     background-color: $sage;
-    border: 2px solid $bistre;
-    border-radius: 20px;
+    border-radius: 10px;
     .mail-container {
       display: block;
       .mail-title {
         display: flex;
         justify-content: center;
       }
-      .email-input {
+      .email-form {
         display: flex;
         justify-content: center;
       }
       #email-list::placeholder {
-          text-align: center;
+        text-align: center;
       }
       .submit-email {
         display: flex;
         justify-content: center;
-        align-content:center;
+        align-content: center;
       }
-
     }
   }
 }
