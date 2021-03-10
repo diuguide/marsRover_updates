@@ -1,9 +1,8 @@
-
 const HeaderDiv = () => {
   return (
     <header>
       <nav>
-        <h1>Mars Perserverance Rover</h1>
+        <div class="title">Perserverance Rover</div>
         <ul>
           <li>
             <a href="#updates">Updates</a>

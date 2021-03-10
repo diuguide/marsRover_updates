@@ -1,0 +1,36 @@
+header {
+  background-image: url("../images/landscape2.png");
+  background-size: cover;
+  height: 400px;
+  overflow: hidden;
+  z-index: 99;
+  nav {
+    position: relative;
+    top: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $bistre;
+    .title {
+        position:relative;
+        left: 20px;
+        font-size: 40px;
+        font-weight: bold;
+    }
+    ul {
+      display: flex;
+      list-style-type: none;
+    }
+    li {
+      padding: 15px;
+    }
+    a {
+      color: $bistre;
+      text-decoration: none;
+    }
+    a:hover {
+      color: $hoverLink;
+    }
+    
+  }
+}

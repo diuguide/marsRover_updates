@@ -1,0 +1,17 @@
+%btn {
+  display: inline-block;
+  border-radius: 10px;
+  margin: 3px;
+
+  &:hover {
+    transform: scale(0.98);
+  }
+}
+.btn-join {
+    @extend %btn;
+    height: 30px;
+    width: 100px;
+    background-color: $backgroundColor;
+    color: $textColor;
+    font-size: 20px;
+}

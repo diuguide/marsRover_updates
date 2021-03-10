@@ -1,10 +1,14 @@
-import './scss/App.scss';
+import "./scss/App.scss";
 import HeaderDiv from "./components/Header";
-
+import MainDiv from "./components/Main";
 
 function App() {
   return (
-    <HeaderDiv />
+    <>
+      <HeaderDiv />
+      <div class="seperator"></div>
+      <MainDiv />
+    </>
   );
 }
 
