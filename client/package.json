@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "homepage":"http://diuguide.github.io/marsRover_updates"
+  "homepage":"http://diuguide.github.io/marsRover_updates",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
