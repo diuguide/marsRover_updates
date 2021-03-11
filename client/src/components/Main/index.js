@@ -3,19 +3,18 @@ import MailingList from "./Mailing";
 import postData from "../../textData/posts";
 
 const MainDiv = () => {
-  console.log("post Data: ", postData.posts);
   return (
     <div className="containerMain">
-      <div className="posts">
-              {postData.posts.map((post, index) => {
-            console.log("post from map:", post.source)
-            return (
-            <PostDiv
+      <div id="posts" className="posts">
+        {postData.posts.map((post, index) => {
+          console.log("post from map:", post.source);
+          return (
+              <PostDiv key={index}
               title={post.title}
               text1={post.text1}
-              text2={post.text2}
               source={post.source}
               img={post.img}
+              alt={post.alt}
             />
           );
         })}

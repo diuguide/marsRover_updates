@@ -5,7 +5,7 @@ const HeaderDiv = () => {
         <div className="title">Perserverance Rover</div>
         <ul>
           <li>
-            <a href="#updates">Updates</a>
+            <a href="#posts">Updates</a>
           </li>
           <li>
             <a target="_blank" href="https://mars.nasa.gov/mars2020/">
