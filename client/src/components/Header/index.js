@@ -8,7 +8,11 @@ const HeaderDiv = () => {
             <a href="#posts">Updates</a>
           </li>
           <li>
-            <a target="_blank" href="https://mars.nasa.gov/mars2020/">
+            <a
+              rel="noreferrer"
+              target="_blank"
+              href="https://mars.nasa.gov/mars2020/"
+            >
               Perserverance NASA Website
             </a>
           </li>

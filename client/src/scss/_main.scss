@@ -13,11 +13,11 @@
     background-color: $sage;
     border-radius: 10px;
   }
-  .mail-input {
+  .side-bar {
     margin: 10px;
-    background-color: $sage;
-    border-radius: 10px;
     .mail-container {
+      background-color: $sage;
+      border-radius: 10px;
       display: block;
       .mail-title {
         display: flex;
@@ -34,6 +34,18 @@
         display: flex;
         justify-content: center;
         align-content: center;
+      }
+    }
+    .twitter-container {
+      background-color: $sage;
+      border-radius: 10px;
+      display:block;
+      margin-top: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      .twitter-post {
+        display: flex;
+        justify-content: center;
       }
     }
   }

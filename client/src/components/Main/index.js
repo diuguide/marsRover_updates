@@ -1,6 +1,7 @@
 import PostDiv from "./Post";
 import MailingList from "./Mailing";
 import postData from "../../textData/posts";
+import Twitter from "./Twitter";
 
 const MainDiv = () => {
   return (
@@ -19,8 +20,9 @@ const MainDiv = () => {
           );
         })}
       </div>
-      <div className="mail-input">
+      <div className="side-bar">
         <MailingList />
+        <Twitter />
       </div>
     </div>
   );
