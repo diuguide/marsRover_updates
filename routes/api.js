@@ -6,7 +6,12 @@ const EmailList = require("../models/Model");
 
 //GET
 router.get("/", (req, res) => {
-    res.send("Succesful!");
+    res.send("Succesful! GET");
 });
+
+//POST
+router.post("/add", (req, res) => {
+    res.send("Succesful! PUT");
+})
 
 module.exports = router;
