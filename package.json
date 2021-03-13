@@ -1,0 +1,27 @@
+{
+  "name": "mars_rover",
+  "version": "1.0.0",
+  "description": "Latest updates from NASA's Mars Rover Perserverance",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github/diuguide/marsRover_updates.git"
+  },
+  "keywords": [
+    "Mars",
+    "Space",
+    "NASA",
+    "JPL",
+    "Everett",
+    "Diuguid",
+    "Diuguid",
+    "Perserverance",
+    "Rover",
+    "Exploration"
+  ],
+  "author": "Everett Diuguid",
+  "license": "MIT"
+}
