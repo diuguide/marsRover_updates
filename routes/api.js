@@ -14,13 +14,13 @@ router.get("/", (req, res) => {
 //POST
 router.post("/add", (req, res) => {
   const { email } = req.body;
-  if (!email) return res.json({ msg: "Please enter an email" });
+  if (!email) return res.json({ msg: "Please enter an email", error: "1" });
   if (email) {
     Email.findOne({ email }).then((emailQuery) => {
-      if (emailQuery) return res.json({ msg: "Email already added to list!" });
+      if (emailQuery) return res.json({ msg: "Email already added to list!", error: "2" });
       const newEmail = new Email({ email });
       newEmail.save();
-      res.json({ msg: "Email added to list!", newEmail });
+      res.json({ msg: "Email added to list!", newEmail, error: "no" });
     });
   }
 });
