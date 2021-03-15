@@ -1,16 +1,17 @@
 header {
   background-image: url("../images/landscape2.png");
   background-size: cover;
-  height: 400px;
+  height: 420px;
   overflow: hidden;
-  z-index: 99;
-  nav {
+}
+nav {
+    background-color: $bistre;
     position: relative;
-    top: 350px;
+    top: 370px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: $bistre;
+    color: $textColor;
     .title {
         position:relative;
         left: 20px;
@@ -25,7 +26,7 @@ header {
       padding: 15px;
     }
     a {
-      color: $bistre;
+      color: $textColor;
       text-decoration: none;
     }
     a:hover {
@@ -33,4 +34,3 @@ header {
     }
     
   }
-}

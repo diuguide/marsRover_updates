@@ -15,5 +15,6 @@
 .seperator {
         display:block;
         height: 20px;
-        background-color: $hoverLink;
+        background-image: linear-gradient($hoverLink, $backgroundColor);
+
     }
