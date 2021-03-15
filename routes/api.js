@@ -6,28 +6,32 @@ const Email = require("../models/Model");
 
 //GET
 router.get("/", (req, res) => {
-    Email.find({})
-      .then((data) => res.json(data))
-      .catch((err) => console.log("Error GET: ", err));
+  Email.find({})
+    .then((data) => res.json(data))
+    .catch((err) => console.log("Error GET: ", err));
 });
 
 //POST
 router.post("/add", (req, res) => {
-    const { email } = req.body;
-    const newEmail = new Email({ email });
-    newEmail.save();
-    res.json(newEmail);
+  console.log(req.body);
+  const { email } = req.body;
+  console.log(email);
+  if (!email) return res.json({ msg: "Please enter an email" });
+  if (email) {
+    Email.findOne({ email }).then((emailQuery) => {
+      if (emailQuery) return res.json({ msg: "Email already added to list!" });
+      const newEmail = new Email({ email });
+      newEmail.save();
+      res.json({ msg: "Email added to list!", newEmail });
+    });
+  }
+});
 
-    // if (!email) return res.sendStatus(400).json({ msg: "Please Enter an email" });
-    // EmailList.findOne({ email }).then((email) => {
-    //     if (email) return res.sendStatus(400).json({ msg: "Email has already been added to our list" });
-    //     const newEmail = new EmailList({
-    //         email
-    //     }).
-    //         res.json(newEmail);
-
-    // })
-
-})
+// Delete User By ID
+router.delete("/email/:id", (req, res) => {
+  Email.findOneAndDelete({ _id: req.params.id })
+    .then((data) => res.json(data))
+    .catch((err) => console.log("Error DELETE: ", err));
+});
 
 module.exports = router;

@@ -9,9 +9,10 @@ function App() {
   let imgUrl;
   let imgDesc;
   let imgType;
+  
   axios
     .get(
-      `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_NASA_API}`
+      `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_NASA_API}&date=2021-3-10`
     )
     .then((data) => {
       console.log(data);
