@@ -13,9 +13,7 @@ router.get("/", (req, res) => {
 
 //POST
 router.post("/add", (req, res) => {
-  console.log(req.body);
   const { email } = req.body;
-  console.log(email);
   if (!email) return res.json({ msg: "Please enter an email" });
   if (email) {
     Email.findOne({ email }).then((emailQuery) => {
