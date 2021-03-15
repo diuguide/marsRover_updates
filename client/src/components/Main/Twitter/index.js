@@ -3,11 +3,11 @@ const Twitter = () => {
     <div className="twitter-container">
       <div className="twitter-post">
         <a
-          class="twitter-timeline"
+          className="twitter-timeline"
           href="https://twitter.com/NASAPersevere"
           data-tweet-limit="3"
           data-width="250"
-        ></a>
+        >  </a>
       </div>
     </div>
   );

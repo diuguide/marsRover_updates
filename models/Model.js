@@ -7,12 +7,7 @@ const EmailSchema = new Schema({
     type: String,
     unique: true,
     trim: true,
-  },
-  name: {
-    type: String,
-    unique: true,
-    trim: true,
-  },
+  }
 });
 const Email = mongoose.model('email', EmailSchema);
 

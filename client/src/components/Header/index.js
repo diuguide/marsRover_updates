@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const HeaderDiv = () => {
   return (
     <header>
@@ -5,7 +7,7 @@ const HeaderDiv = () => {
         <div className="title">Perserverance Rover</div>
         <ul>
           <li>
-            <a href="#posts">Updates</a>
+            <Link to="/">Updates</Link>
           </li>
           <li>
             <a
@@ -17,7 +19,7 @@ const HeaderDiv = () => {
             </a>
           </li>
           <li>
-            <a href="#images">Images</a>
+           <Link to="/APOD">APOD</Link>
           </li>
         </ul>
       </nav>

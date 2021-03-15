@@ -5,7 +5,6 @@ const PostDiv = ({ title, text1, source, img, alt }) => {
       <div className="post-content">
         <div className="post-img-container">
           <img className="post-img" src={img} alt={alt}></img>
-          {/* <a className="post-img-link" href="#" target="_blank"></a> */}
         </div>
         <div className="post-text">
           <div className="main-text">{text1}</div>
