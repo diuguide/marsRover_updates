@@ -8,7 +8,6 @@ const MainDiv = () => {
     <div className="containerMain">
       <div id="posts" className="posts">
         {postData.posts.map((post, index) => {
-          console.log("post from map:", post.source);
           return (
               <PostDiv key={index}
               title={post.title}
