@@ -20,7 +20,11 @@ const MailingList = () => {
             alert(`${response.data.newEmail.email} has been added to our list!`);
         }
       setEmail("");
-    });
+    }).catch((err) => console.log("error post Mailing: ", err));
+    //node mailer
+    axios.post("/mail/send", { email: email }).then((res) => {
+      console.log(res);
+    }).catch((err) => console.log("nodemailer Error: ", err));
   };
 
   return (

@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const routes = require("./routes/api");
+const nodemailer = require("./nodemailer/index");
+require("dotenv").config();
 
 //Define Port
 const port = process.env.PORT || 5000;
@@ -42,6 +44,9 @@ mongoose.Promise = global.Promise;
 
 //connect routes
 app.use("/api", routes);
+
+//nodemailer
+app.use("/mail", nodemailer);
 
 //Start the api server
 app.listen(port, () => {
