@@ -1,0 +1,47 @@
+.apod-container {
+  background-color: $coyoteBrown;
+  border: 5px solid $bistre;
+  width: 1010px;
+  margin: 0 auto;
+  margin-top: 50px;
+  border-radius: 20px;
+  .apod-title {
+      text-align: center;
+  }
+  &-photo {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 10px;
+    height: 100%;
+    background-color: $sage;
+    border-radius: 10px;
+    #apod-video {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    #apod-image {
+      width: 854px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+  &-desc {
+    margin: 10px;
+    padding: 10px;
+    background-color: $sage;
+    border-radius: 10px;
+  }
+  &-title,
+  &-explanation,
+  &-date {
+    display: flex;
+    h3 {
+        margin-right: 5px;
+    }
+    p {
+        
+        margin-top: 2px;
+    }
+  }
+}

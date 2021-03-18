@@ -1,5 +1,5 @@
 //REACT UTILS
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
 
 //COMPONENTS
@@ -10,15 +10,13 @@ import Apod from "./components/APOD";
 //REDUX
 import { ACTIONS } from "./store/redux";
 import { loadApod } from "./utilities/util";
-import { shallowEqual, useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 
 //SCSS
 import "./scss/App.scss";
 
 function App() {
   const dispatch = useDispatch();
-  const store = useSelector((store) => store, shallowEqual);
-  console.log("store in app.js:", store);
   let stopper = 0;
   useEffect(() => {
     dispatch({ type: ACTIONS.LOADING });
