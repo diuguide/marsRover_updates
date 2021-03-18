@@ -21,13 +21,13 @@ function App() {
   console.log("store in app.js:", store);
   let stopper = 0;
   useEffect(() => {
-    dispatch({type: ACTIONS.LOADING });
+    dispatch({ type: ACTIONS.LOADING });
     loadApod()
       .then((info) => {
-       dispatch({
-      type: ACTIONS.LOAD_APOD,
-      payload: info
-       });
+        dispatch({
+          type: ACTIONS.LOAD_APOD,
+          payload: info,
+        });
       })
       .catch((err) => console.log("Error useEffect: ", err));
   }, [stopper]);
@@ -36,16 +36,10 @@ function App() {
     <>
       <HeaderDiv />
       <div className="seperator"></div>
-      {/* <Switch>
+      <Switch>
         <Route exact path="/" component={MainDiv} />
-        <Route
-          exact
-          path="/APOD"
-          render={(props) => (
-            <Apod {...props}  imgUrl={imgUrl} imgDesc={imgDesc} imgType={imgType} />
-          )}
-        />
-      </Switch> */}
+        <Route exact path="/APOD" component={Apod} />
+      </Switch>
     </>
   );
 }

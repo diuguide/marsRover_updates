@@ -10,6 +10,7 @@ export const ACTIONS = {
 const initialState = {
   apod: {},
   loading: false,
+  loaded: false
 };
 
 const dataReducer = (state = initialState, action) => {
@@ -25,7 +26,8 @@ const dataReducer = (state = initialState, action) => {
       return {
         ...state,
         apod: action.payload,
-        loading: false
+        loading: false,
+        loaded: true
       }
     }
     default:
