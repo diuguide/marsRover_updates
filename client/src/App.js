@@ -1,29 +1,42 @@
-import "./scss/App.scss";
+//REACT UTILS
+import React, { useEffect, useState } from "react";
+import { Switch, Route } from "react-router-dom";
+
+//COMPONENTS
 import HeaderDiv from "./components/Header";
 import MainDiv from "./components/Main";
 import Apod from "./components/APOD";
-import { Switch, Route } from "react-router-dom";
-import axios from "axios";
+
+//REDUX
+import { ACTIONS } from "./store/redux";
+import { loadApod } from "./utilities/util";
+import { shallowEqual, useSelector, useDispatch } from "react-redux";
+
+//SCSS
+import "./scss/App.scss";
 
 function App() {
-  let imgUrl;
-  let imgDesc;
-  let imgType;
-  
-  axios
-    .get(
-      `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_NASA_API}`
-    )
-    .then((data) => {
-      imgUrl = data.data.url;
-      imgDesc = data.data.explanation;
-      imgType = data.data.media_type;
-    });
+  const dispatch = useDispatch();
+  const store = useSelector((store) => store, shallowEqual);
+  console.log("store in app.js:", store);
+  let stopper = 0;
+  useEffect(() => {
+    dispatch({type: ACTIONS.LOADING });
+    loadApod()
+      .then((info) => {
+       dispatch({
+      type: ACTIONS.LOAD_APOD,
+      payload: info
+       });
+      })
+      .catch((err) => console.log("Error useEffect: ", err));
+  }, [stopper]);
+
   return (
     <>
       <HeaderDiv />
       <div className="seperator"></div>
-      <Switch>
+      {/* <Switch>
         <Route exact path="/" component={MainDiv} />
         <Route
           exact
@@ -32,7 +45,7 @@ function App() {
             <Apod {...props}  imgUrl={imgUrl} imgDesc={imgDesc} imgType={imgType} />
           )}
         />
-      </Switch>
+      </Switch> */}
     </>
   );
 }

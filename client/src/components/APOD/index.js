@@ -1,4 +1,6 @@
 const Apod = ({ imgUrl, imgDesc, imgType }) => {
+  
+
   return (
     <div className="apod-container">
       <div className="apod-container-photo">
