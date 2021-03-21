@@ -8,7 +8,7 @@ const PostSchema = new Schema({
     unique: true,
     trim: true,
   },
-  text1: {
+  text: {
     type: String,
     trim: true,
   },

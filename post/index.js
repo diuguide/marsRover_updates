@@ -10,8 +10,8 @@ router.get("/", (req, res) => {
 });
 
 router.post("/addPost", (req, res) => {
-  const { title, text1, source, img, alt } = req.body;
-  const newPost = new Post({ title, text1, source, img, alt });
+  const { title, text, source, img, alt } = req.body;
+  const newPost = new Post({ title, text, source, img, alt });
   newPost
     .save()
     .catch((err) => console.log(err));
