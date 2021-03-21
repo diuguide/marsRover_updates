@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { useState } from 'react';
 import PostModal from "../PostModal";
 
-
 const HeaderDiv = () => {
   const [show, setShow] = useState(false);
   const handleShow = () => setShow(true);
