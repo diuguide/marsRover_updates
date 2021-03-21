@@ -3,6 +3,7 @@ const app = express();
 const mongoose = require("mongoose");
 const routes = require("./routes/api");
 const nodemailer = require("./nodemailer/index");
+const post = require("./post/index");
 require("dotenv").config();
 
 //Define Port
@@ -47,6 +48,9 @@ app.use("/api", routes);
 
 //nodemailer
 app.use("/mail", nodemailer);
+
+//post routes
+app.use("/post", post);
 
 //Start the api server
 app.listen(port, () => {
