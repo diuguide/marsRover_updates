@@ -9,5 +9,6 @@ export async function loadApod() {
 
 export async function loadPosts() {
   const data = await axios.get("/post");
+  data = res;
   return data;
 }

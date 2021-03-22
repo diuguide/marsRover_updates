@@ -11,14 +11,18 @@ const PostModal = ({ show, setShow }) => {
     img: "",
     alt: "",
   });
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setPost({ ...post, [name]: value });
   };
   const handleSubmit = (e) => {
-      e.preventDefault();
-      axios.post("/post/addPost", post).then(res => console.log(res));
-  }
+    e.preventDefault();
+    axios.post("/post/addPost", post).then((res) => {
+      handleClose();
+      console.log(res);
+    });
+  };
 
   return (
     <>
@@ -96,9 +100,6 @@ const PostModal = ({ show, setShow }) => {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
           <Button variant="primary" onClick={handleSubmit}>
             Submit
           </Button>

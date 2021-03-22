@@ -1,4 +1,10 @@
+import { useState } from 'react';
+import { loadPosts } from '../../../utilities/util';
+
 const PostDiv = ({ title, text1, source, img, alt }) => {
+  const [isLoading, setIsLoading] = useState(true);
+  loadPosts().then(data => console.log(data));
+
   return (
     <div className="post-container">
       <div className="post-title">{title}</div>

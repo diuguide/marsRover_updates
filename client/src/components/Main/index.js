@@ -2,8 +2,11 @@ import PostDiv from "./Post";
 import MailingList from "./Mailing";
 import postData from "../../textData/posts";
 import Twitter from "./Twitter";
+import { loadPosts } from "../../utilities/util";
 
 const MainDiv = () => {
+  
+  loadPosts().then(res => console.log(res));
   return (
     <div className="containerMain">
       <div id="posts" className="posts">
