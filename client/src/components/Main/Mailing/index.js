@@ -10,21 +10,24 @@ const MailingList = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post("/api/add", { email: email }).then((response) => {
-        console.log(response);
+    axios
+      .post("/api/add", { email: email })
+      .then((response) => {
         if (response.data.error === "2") {
-            alert('Error: Email has already been added to our list');
+          alert("Error: Email has already been added to our list");
         } else if (response.data.error === "1") {
-            alert('Error: Please enter an email address');
+          alert("Error: Please enter an email address");
         } else {
-            alert(`${response.data.newEmail.email} has been added to our list!`);
+          alert(`${response.data.newEmail.email} has been added to our list!`);
         }
-      setEmail("");
-    }).catch((err) => console.log("error post Mailing: ", err));
+        setEmail("");
+      })
+      .catch((err) => console.log("error post Mailing: ", err));
     //node mailer
-    axios.post("/mail/send", { email: email }).then((res) => {
-      console.log(res);
-    }).catch((err) => console.log("nodemailer Error: ", err));
+    axios
+      .post("/mail/send", { email: email })
+      .then((res) => {})
+      .catch((err) => console.log("nodemailer Error: ", err));
   };
 
   return (
