@@ -20,7 +20,7 @@ const PostModal = ({ show, setShow }) => {
     e.preventDefault();
     axios.post("/post/addPost", post).then((res) => {
       handleClose();
-      console.log(res);
+      window.location.reload();
     });
   };
 
