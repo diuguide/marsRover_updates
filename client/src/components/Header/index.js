@@ -17,9 +17,6 @@ const HeaderDiv = () => {
             </div>
           </li>
           <li>
-            <Link to="/">Updates</Link>
-          </li>
-          <li>
             <a
               rel="noreferrer"
               target="_blank"
