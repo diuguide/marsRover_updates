@@ -9,7 +9,10 @@ const HeaderDiv = () => {
     <header>
       <PostModal show={show} setShow={setShow} />
       <nav>
-        <div className="title">Perserverance Rover</div>
+        <Link to="/">
+<div className="title">Perserverance Rover</div>
+        </Link>
+        
         <ul>
           <li>
             <div className="modalButton" onClick={handleShow}>

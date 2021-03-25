@@ -1,13 +1,14 @@
+import { TwitterTimelineEmbed } from 'react-twitter-embed';
+
 const Twitter = () => {
   return (
     <div className="twitter-container">
       <div className="twitter-post">
-        <a
-          className="twitter-timeline"
-          href="https://twitter.com/NASAPersevere"
-          data-tweet-limit="3"
-          data-width="250"
-        >  </a>
+        <TwitterTimelineEmbed
+          sourceType="profile"
+          screenName="NASAPersevere"
+          options={{ height: 400, tweetLimit: 5 }}
+        />
       </div>
     </div>
   );
