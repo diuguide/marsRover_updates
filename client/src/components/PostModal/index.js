@@ -65,6 +65,8 @@ const PostModal = ({ show, setShow }) => {
             </Form.Group>
             <Form.Group>
               <Form.Control
+                as="textarea"
+                rows={3}
                 type="text"
                 placeholder="Enter the text"
                 id="text"
