@@ -4,6 +4,7 @@ import axios from "axios";
 
 const PostModal = ({ show, setShow }) => {
   const handleClose = () => setShow(false);
+  const [postPass, setPostPass] = useState({ postPass: "" });
   const [post, setPost] = useState({
     title: "",
     text: "",
@@ -11,17 +12,34 @@ const PostModal = ({ show, setShow }) => {
     img: "",
     alt: "",
   });
-
+  const handleChangePass = (e) => {
+    const { name, value } = e.target;
+    setPostPass({ ...postPass, [name]: value });
+    console.log("post pass: ", postPass);
+  }
+  const checkPass = (pass) => {
+    if (pass === process.env.REACT_APP_POST_PASSWORD) {
+      return true;
+    } else {
+      return false;
+    }
+  } 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setPost({ ...post, [name]: value });
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post("/post/addPost", post).then((res) => {
+    let auth = checkPass(postPass.postPass);
+    if (auth) {
+      axios.post("/post/addPost", post).then((res) => {
       handleClose();
       window.location.reload();
     });
+    } else {
+      alert('Please enter the editor password');
+    }
+    
   };
 
   return (
@@ -95,6 +113,19 @@ const PostModal = ({ show, setShow }) => {
               />
               <Form.Text className="text-muted">
                 Enter the alt tag for the image
+              </Form.Text>
+            </Form.Group>
+            <Form.Group>
+              <Form.Control
+                type="password"
+                placeholder="Enter the password to post this"
+                id="postPass"
+                name="postPass"
+                value={postPass.postPass}
+                onChange={handleChangePass}
+              />
+              <Form.Text className="text-muted">
+                Enter the editor password
               </Form.Text>
             </Form.Group>
           </Form>
