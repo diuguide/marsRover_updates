@@ -33,7 +33,7 @@ const MailingList = () => {
   return (
     <div className="mail-container">
       <div className="mail-title">
-        <h3>Please Join our Mailing List!</h3>
+        Please Join our Mailing List!
       </div>
       <div className="email-form">
         <input
