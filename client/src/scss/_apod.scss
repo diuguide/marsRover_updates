@@ -3,10 +3,13 @@
   border: 5px solid $bistre;
   width: 1010px;
   margin: 0 auto;
-  margin-top: 50px;
+  marGin-top: 50px;
   border-radius: 20px;
+  .apod-container-title {
+      font-weight: bold;
+  }
   .apod-title {
-      text-align: center;
+    text-align:center;
   }
   &-photo {
     display: flex;
