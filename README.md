@@ -25,7 +25,7 @@ To install this application locally, clone the repository and run npm install fr
 
 ## Explanation of Technology
 
-This is a Mern stack application.  The front end is handled with ```reactjs``` using a template created with ```npx create-react-app```.  The front end styling is mostly SCSS using the ```node-sass``` npm package with a few components like the post modal that utilize the ```react-bootstrap``` package.  Data is populated from a MongoDB database with the Astronomy Picture of the Day or ```APOD``` being accessed utilizing NASA Open API.  The backend routing is handled with ```express.js``` and the package manager used is ```node.js```.
+This is a Mern stack application.  The front end is handled with ```reactjs``` using a template created with ```npx create-react-app```.  The front end styling is mostly SCSS using the ```node-sass``` npm package with a few components like the post modal that utilize the ```react-bootstrap``` package.  Data is populated from a MongoDB database with the Astronomy Picture of the Day or ```APOD``` being accessed utilizing NASA Open API.  ```nodemailer``` is used to send the user an email after signing up for the mailing list, however it uses a gmail account as the sender account and this does not function the same on Heroku.  It does work locally however.  The backend routing is handled with ```express.js``` and the package manager used is ```node.js```.
 
 ## Future Improvements
 
