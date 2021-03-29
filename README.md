@@ -51,7 +51,7 @@ Please reach out to me @ ```everett.diuguid@gmail.com``` with any questions rega
 
 ## License
 
-[MIT](LICENSE) copyright (c) 2020 Everett Diuguid.
+[MIT](LICENSE) copyright (c) 2021 Everett Diuguid.
 
 [back to Table of Contents](#table-of-contents)
 
