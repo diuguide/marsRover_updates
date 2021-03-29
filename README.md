@@ -10,7 +10,7 @@ This is an application posting updates from the Mars Rover Perserverance.  It is
 - [Usage](#usage)
 - [Installation](#installation)
 - [Explanation of Tech](#Explanation-of-Technology)
-- [Future Improvements](#futureimprovements)
+- [Future Improvements](#future-improvements)
 - [Contributing](#contributing)
 - [Questions](#questions)
 - [License](#license)
